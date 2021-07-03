@@ -55,6 +55,7 @@ arrayOfArrays = [
 
 // Get element with ID "container" from the page
 
+
 // Get every "td" from the page
 
 getTableContents = document.getElementsByTagName("td")
