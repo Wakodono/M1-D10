@@ -1,10 +1,10 @@
 td a img {
-    max-height:100px;
-   max-width:100px
+   width: 100%;;
+   height: auto;
 }
 
-table, th, td {
-  border: 1px solid black;
+th, td {
+  /* border: 1px solid green; */
   padding: 3px;
   text-align: center;
   border-spacing: 5px;
@@ -14,8 +14,8 @@ table, th, td {
 }
 
   img {
-      width: 100px;
-      height: 100px;
+      width: 100%;
+      height: auto;
   }
 
   body {
@@ -41,6 +41,20 @@ table, th, td {
 
   table {
     border-radius: 15px;
+    border-collapse: collapse;
+  }
+
+  .font-weight{
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .hide{
+    visibility: hidden;
+  }
+
+  tr {
+    border: 1px dotted red;
   }
 
 

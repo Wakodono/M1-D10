@@ -1,14 +1,10 @@
+// JS EXERCISES
 
 // 21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
 
 const x = 'John'
 const y = 'Doe'
 console.log(`${x} <> ${y}`)
-
-/* JS EXERCISES
-29) Create a function that gets 2 arrays and returns the longest one
-30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
-*/
 
 // 22) Create an object with properties such name, surname, email
 const person = {
@@ -63,6 +59,9 @@ function findMinAndMax(arr) {
 }
 
 findMinAndMax(randomNumArr)
+
+//29) Create a function that gets 2 arrays and returns the longest one
+//30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
 
 
 
