@@ -160,3 +160,73 @@ const emptyList = function () {
     const ul = document.querySelector("ul");
     ul.innerHTML = "";
   };
+
+  // EXTRAS
+
+//  41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+
+      const alertUrl = function () {
+        const links = document.querySelectorAll("a");
+        links.forEach((link) => {
+          link.onmouseenter = function (e) {
+            alert(e.target.href);
+          };
+        });
+      };
+
+ // 43) Add a button to hide and show the table from the page
+      const toggleTable = function () {
+        const btn = document.createElement("button");
+        btn.innerText = "Toggle table";
+        btn.onclick = function () {
+          const table = document.querySelector("table");
+          table.classList.toggle("d-none");
+        };
+
+        const body = document.querySelector("body");
+        body.appendChild(btn);
+      };
+
+// 48) Add a pink border to a cell when the mouse is over it
+const addPinkBorder = function () {
+    const cells = document.querySelectorAll("td");
+    cells.forEach((td) => {
+      td.onmouseenter = function (e) {
+        e.target.classList.add("border-pink");
+      };
+      td.onmouseleave = function (e) {
+        e.target.classList.remove("border-pink");
+      };
+    });
+  };
+
+  // 49) Write a function to add a table with 4 rows and 3 columns programmatically
+
+  const createTable = function () {
+    const body = document.querySelector("body");
+    const table = document.createElement("table");
+    const tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    body.appendChild(table);
+    for (let i = 0; i < 5; i++) {
+      const tr = document.createElement("tr");
+      tbody.appendChild(tr);
+      for (let j = 0; j < 3; j++) {
+        if (i === 0) {
+          const th = document.createElement("th");
+          th.innerText = "Heading " + (j + 1);
+          tr.appendChild(th);
+        } else {
+          const td = document.createElement("td");
+          td.innerText = `Row ${i} Col ${j + 1}`;
+          tr.appendChild(td);
+        }
+      }
+    }
+  };
+
+  // 50) Write a function to remove the table from the page
+  const removeTable = function () {
+    const table = document.querySelectorAll("table")[1];
+    table.remove();
+  };

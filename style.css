@@ -57,6 +57,10 @@ th, td {
     border: 1px dotted red;
   }
 
+  .border-pink {
+    border-color: pink;
+  }
+
 
   /* CSS EXERCISES
 
