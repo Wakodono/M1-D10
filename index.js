@@ -25,7 +25,10 @@ for (let i = 1; i <= 10; i++) {
 }
 
 // 25) Print in the console every string in the previous array
-console.log(stringsArr)
+for (let string of stringsArr){
+    console.log(string)
+
+}
 
 // 26) Create an array with 100 random numbers in it
 const randomNumArr = []
@@ -60,11 +63,47 @@ function findMinAndMax(arr) {
 
 findMinAndMax(randomNumArr)
 
+// 28) Create an array of 10 arrays filled with random numbers
+let arrayOfArrays = []
+
+for (let i = 0; i < 10; i++) {
+    let nestedArr = []
+
+    for (let j = 0; j < 10; j++) {
+        nestedArr.push() = Math.floor(Math.random() * 10);
+    }
+    arrayOfArrays.push(nestedArr)
+}
+console.log(arrayOfArrays)
+
 //29) Create a function that gets 2 arrays and returns the longest one
+function longestOne (arr1, arr2) {
+    if (arr1.length > arr2.length) {
+        return arr1
+    } else {
+        return arr2
+    }
+}
+
 //30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+function highestSumArr(arr1, arr2) {
+    let sum1 = 0;
 
+        for (let number of arr1) {
+          sum1 += number;
+        }
 
+        let sum2 = 0;
 
+        for (let number of arr2) {
+          sum2 += number;
+        }
+
+        return sum1 >= sum2 ? sum1 : sum2;
+      }
+}
+
+// DOM EXERCISES
 
 // 31) Get element with ID "container" from the page
 function container (){
@@ -103,19 +142,21 @@ tableRows.className += "test"
 const redLink = querySelectorAll("a").style.backgroundColor = "red"
 
 // 38) Console log "Page loaded" when the page is correctly loaded
-window.onload = function () {
-    console.log("PAGE LOADED")
+window.onload = (e) => {
+    console.log('Page loaded');
+  };
 
 // 39) Write a function to add new items to a UL
-
-
-// 40) Write a function to empty a list
-function emptyUlList() {
-    const ulList = document.querySelector("#container ul")
-
-    ulList.innerHTML = ""
-
+function addLi () {
+    const ul = document.querySelector('ul')
+    li = document.createElement('li')
+    li.innerText = "I'm a new list item mayne"
+    ul.appendChild(li)
 }
 
+// 40) Write a function to empty a list
 
-// DOM 
+const emptyList = function () {
+    const ul = document.querySelector("ul");
+    ul.innerHTML = "";
+  };
